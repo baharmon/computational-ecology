@@ -1,0 +1,86 @@
+%% Preamble/settings for documents exported from .org files to .tex files when the 
+%% tex engine is xelatex.
+%%
+%% Usage: \usepackage{org-preamble-xelatex} in your document
+%% preamble. Font choice should be set in the document after the
+%% package is declared. If \usepackage[minted]{org-preamble-xelatex}
+%% is given, the minted package for code highlighting is turned
+%% on. Minted requires that pygments be installed
+%% (http://pygments.org/) and that \write18 support be enabled in your
+%% tex compiler.
+
+%% Kieran Healy
+%%
+ 
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{org-preamble-xelatex}[2011/02/21 v0.01 Bundling of Preamble items for Org to XeLaTeX export]
+
+\RequirePackage{ifthen}
+\newboolean{@minted} %
+
+\setboolean{@minted}{false} % minted is off by default
+
+\DeclareOption{minted}{
+  \setboolean{@minted}{true}
+}
+
+\ProcessOptions
+
+\usepackage{xltxtra}
+\RequirePackage{fontspec}
+\RequirePackage{xunicode}
+\RequirePackage{url}
+\RequirePackage{rotating}
+\RequirePackage{memoir-article-styles}
+\RequirePackage[american]{babel}
+\RequirePackage[babel]{csquotes}
+\RequirePackage[svgnames]{xcolor}
+\RequirePackage{soul}
+\RequirePackage[xetex, colorlinks=true, urlcolor=DarkSlateBlue,
+citecolor=DarkSlateBlue, filecolor=DarkSlateBlue, plainpages=false,
+pdfpagelabels, bookmarksnumbered]{hyperref}
+\RequirePackage{etoolbox}
+\RequirePackage{float}
+\RequirePackage{graphicx}
+
+% Biblatex
+ \RequirePackage[style=chicago-authordate, %authoryear,
+%             bibstyle=authoryear,
+%             citestyle=authoryear,
+             sorting=ydnt,
+             url=false,
+             doi=true,
+             natbib,
+             hyperref=true,
+             maxnames=12,
+             isbn=false,
+             backend=biber, 
+             babel=hyphen, 
+             bibencoding=inputenc]{biblatex} % {biblatex-chicago} {biblatex} 
+
+%% Fix biblatex's odd preference for using In: by default.
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{}\intitlepunct}}}
+
+%% Basic bibliography
+\addbibresource{readings.bib}
+
+%% these tweak the biblatex-chicago format to conform to AJS style.
+   \DeclareFieldFormat[article]{title}{\mkbibquote{#1}}
+   \DeclareFieldFormat[book]{title}{%
+   \mkbibemph{#1}\isdot} % for books
+\DeclareFieldFormat{booktitle}{\mkbibemph{#1}} % for edited volumes
+
+%% Pagestyle
+\pagestyle{kjh}
+
+%% If [minted] option is chosen, activate minted
+\ifthenelse{\boolean{@minted}}{
+  \RequirePackage{minted}
+  \usemintedstyle{tango} 
+  \definecolor{bg}{rgb}{0.95,0.95,0.95}
+  \setkeys{Gin}{width=1\@textwidth} 
+}{}
+
+\endinput
