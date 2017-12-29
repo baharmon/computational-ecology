@@ -22,7 +22,7 @@ a day in a seminar discussing ecological theory and its applications,
 a day in a workshop learning new computational methods,
 and a day developing your projects.
 There will be an optional fieldtrip to Yosemite National Park
-the week before the semester starts. 
+the week before the semester starts.
 
 **Assignments** | [Projects](projects.md)
 
@@ -35,7 +35,6 @@ the week before the semester starts.
 **Add-ons** |
 [LCorridors](https://github.com/LEEClab/LS_CORRIDORS) |
 [Itzi](https://www.itzi.org/) |
-[r.lake.series](https://grass.osgeo.org/grass72/manuals/addons/r.lake.series.html) |
 [r.geomorphon](https://grass.osgeo.org/grass72/manuals/addons/r.geomorphon.html) |
 [r.skyview](https://grass.osgeo.org/grass72/manuals/addons/r.skyview.html) |
 [r.stream](https://grasswiki.osgeo.org/wiki/R.stream.*_modules) |
