@@ -10,6 +10,11 @@
 \usepackage{org-preamble-xelatex}
 \usepackage{wallpaper}
 \usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{multicol}
+\setlength{\columnsep}{1em}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 \AtBeginBibliography{\small}
 
@@ -31,9 +36,8 @@
 \def\myaffiliation{\ \\Louisiana State University}
 \def\myauthor{Brendan Harmon}
 \def\mykeywords{Landscape Architecture, Syllabus}
-\def\mytitle{{\normalsize \textsc{LA} 2101 | 7102\newline} \huge \bfseries Computational Ecology}
-% Landscape Representation III \& Graduate Landscape Representation II
-%\def\mysubtitle{\Large The Landscape Machine Lab}
+\def\mytitle{{\normalsize LA 7051 | {\sffamily\mdseries Advanced Topics Studio} \newline} \Large \bfseries Computational Ecology} 
+\def\mysubtitle{\sffamily\mdseries {\normalsize Yosemite National Park}}
 
 % color
 \makeatletter
@@ -58,8 +62,8 @@
 \def\labelitemi{$\cdot$}
 \chapterstyle{article-4-sans}  
 \title{\LARGE \mytitle \newline \mysubtitle}     
-\author{\Large\myauthor \newline \footnotesize\texttt{\noindent\myemail}}
-\date{Fall 2018. Design 217.\newline Monday, Wednesday, \& Friday 9:30am--11:30am.}
+\author{\large\myauthor \newline \footnotesize\texttt{\noindent\myemail}}
+\date{\normalsize Fall 2018. Design 217.\newline Monday, Wednesday, \& Friday \newline 1:30pm--5:30pm.}
 \published{\,}
 
 % -------------------------------- COVER PAGE -------------------------------- 
@@ -68,12 +72,8 @@
 \globalcolor{black}
 \vspace*{-10em}
 \maketitle
-\ThisCenterWallPaper{1}{../images/}
+\ThisCenterWallPaper{1}{../images/yosemite/yosemite_portrait_2.png}
 \vfill
-\begin{center}
-%\noindent \textbf{Image title} \\
-%\copyright \hspace*{0.25em} Image copyright
-\end{center}
 \clearpage
 
 % -------------------------------- DESCRIPTION -------------------------------- 
@@ -83,281 +83,276 @@
 \vspace*{-10em}
 \maketitle
 
-\section{Course Description}
-
-%This course is an introduction to digital design for landscape architects. \\
-
-
-\clearpage
-
-% -------------------------------- SCHEDULE -------------------------------- 
-\section{Course Schedule}
-
-\begin{enumerate}
+\section{Course description}
+In this studio you will learn computational methods for ecological modeling
+and use them to plan for the future of Yosemite national park. 
+This studio will introduce advanced topics in landscape ecology and biodiversity conservation
+such as shifting ecological baselines, process-form interaction, 
+systematic conservation planning, and climate change adaptation. 
+You will learn how to model ecological patterns and simulate ecological processes
+using Geographic Information Systems (GIS). 
+You will learn visual programming, geospatial programming in Python, 
+digital fabrication methods, and advanced 3D rendering. 
+You will apply these methods to develop a long-term landscape plan
+for the national park. 
+Each week you will spend 
+a day in a seminar discussing ecological theory and its applications,
+a day in a workshop learning new computational methods,
+and a day developing your projects.
 %
-%\item Kinetic art seminar \& Ideation I \& Workshop I \textbf{Project assigned:} Kinetic art
-%
-\item Field trip: National Park
-\item 
-\item 
-\item 
-\item 
-%
-\item 
-\item 
-\item 
-\item 
-\item 
-%
-\item 
-\item 
-\item 
-\item 
-\item Final Review
-%
-\end{enumerate}
+
+\section{Optional fieldtrip}
+There will be an optional fieldtrip to Yosemite National Park
+the week before the semester starts. 
+% Estimated cost: $750
 
 %\clearpage
 
 % -------------------------------- SCHEDULE -------------------------------- 
-\section{Course Schedule}
+
+\section{Course schedule}
+\small
+%
+\begin{multicols}{3}
+\begin{enumerate}[label=\textbf{\arabic*}]
+%
+\item Landscape ecology
+\item Programming
+\item Form \& process
+\item Baselines
+\item Suitability
+\item Viewsheds
+\item Corridors
+\item Land change
+\item Fire simulation
+\item Flood simulation
+\item Digital fabrication
+\item Planning I
+\item Planning II
+\item 3D rendering
+\item Final review
+%
+\end{enumerate}
+\end{multicols}
+
+\clearpage
+
+% -------------------------------- FIGURES -------------------------------- 
+
+%\begin{figure}
+%\begin{center}
+%%
+%\includegraphics[height=4.4cm]{../images/yosemite/half_dome_hex_with_base.png} \hspace{0.25cm}
+%%
+%\includegraphics[height=4.4cm]{../images/yosemite/half_dome_sq_greyscale.jpg}
+%\caption{3D model and cast aluminum model of Half Dome, Yosemite}
+%%
+%\label{fig:unbuilt_houses}
+%\end{center}
+%\end{figure}
+
+%\clearpage
+
+% -------------------------------- PROJECTS -------------------------------- 
+\section{Projects}
+\normalsize
+At the final review you will present your work from all three projects -- 
+mapping and analysis, landscape planning, and reserve design -- 
+in an engaging narrative that explains the challenges faced by the park, 
+your landscape planning methodology, and your design. 
+\\
+
+\noindent \textbf{Mapping \& analysis}
+You will develop a series of maps and other media that describe the national park,
+its physical environment, and ecological patterns and processes. 
+Your work should introduce the biodiversity conservation issues 
+faced by the park.
+Deliverables may include maps, renderings, animations, video, and text. 
+% The review will be floating, gallery style. Pin up the evening before.
+\textbf{Due:} week 5.
+\\
+
+\noindent \textbf{Planning methodology}
+You will develop a landscape planning methodology 
+for developing a long-term master plan for the national park. 
+Begin with a suitability analysis using map overlays
+You should should also develop graphics that explain your planning methodology. 
+% The review will be floating, gallery style. Pin up the evening before.
+\textbf{Due:} week 10.
+\\
+
+\noindent \textbf{Landscape planning}
+You will design a long-term masterplan for the national park
+that addresses contemporary and emerging ecological issues. 
+Your masterplan should evolve over time, 
+address multiple spatial and temporal scales, 
+engage visitors in the park's ecological processes,
+and aesthetically express the uniqueness and dynamism of the landscape. 
+Deliverables include an illustrative masterplan, a CNC milled terrain model, 
+phasing diagrams, diagrams illustrating management regimes, and 3D renderings.
+\textbf{Due:} week 15.
+\\
+
+% -------------------------------- Grading -------------------------------- 
+\section{Grading}
 
 \begin{table}[H]
 \small
-\begin{tabular}{l r @{\hskip 0.1cm} l @{\hskip 0.5cm} l}
-% week 1
-\textbf{00.00.2018} & \textbf{Seminar |} & Kinetic art & \textbf{Project assigned:} Kinetic art\\
-\textbf{00.00.2018} & \textbf{Lab |} & Ideation I\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\\
-% week 2
-\textbf{00.00.2018} & \textbf{Lab |} & Ideation II\\
-\textbf{00.00.2018} & \textbf{Lab |} & 3D modeling I\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 3
-\textbf{00.00.2018} & \textbf{Lab |} & Ideation III\\
-\textbf{00.00.2018} & \textbf{Lab |} & 3D modeling II\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 4
-\textbf{00.00.2018} & \textbf{Lab |} & 3D modeling III\\
-\textbf{00.00.2018} & \textbf{Lab |} & 3D rendering I\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 5
-\textbf{00.00.2018} & \textbf{Lab |} & 3D modeling IV\\
-\textbf{00.00.2018} & \textbf{Lab |} & 3D rendering II\\
-\textbf{00.00.2018} & \textbf{Review |} & Kinetic art & \textbf{Project due:} Kinetic art\\
-\\
-% week 6
-\textbf{00.00.2018} & \textbf{Seminar |} & Robotics & \textbf{Project assigned:} Machines\\
-\textbf{00.00.2018} & \textbf{Lab |} & Arduino I\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ... \\
-% week 7
-\textbf{00.00.2018} & \textbf{Lab |} & 3D printing I \\
-\textbf{00.00.2018} & \textbf{Lab |} & 3D printing II\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 8
-\textbf{00.00.2018} & \textbf{Lab |} & Visual programming I\\ % grasshopper
-\textbf{00.00.2018} & \textbf{Lab |} & Visual programming II\\ % firefly and firefly
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\ 
-% week 9
-\textbf{00.00.2018} & \textbf{Lab |} & Animation I\\
-\textbf{00.00.2018} & \textbf{Lab |} & Animation II\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 10
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-\textbf{00.00.2018} & \textbf{Review |} & Machines & \textbf{Project due:} Machines\\
-\\
-% week 11
-\textbf{00.00.2018} & \textbf{Lab |} & ... & \textbf{Project assigned:} Landscape machines\\
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 12
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 13
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 14
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ...\\
-% week 15
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Lab |} & ...\\
-\textbf{00.00.2018} & \textbf{Workshop |} & ... & \textbf{Project due:} Landscape machines\\
-%
+\begin{tabular}{l l l l l l}
+\textbf{Mapping} & 25\% &
+\textbf{Methodology} & 25\% &
+\textbf{Planning} & 50\% \\
 \end{tabular}
 \end{table}
 
-\clearpage
-
-%% -------------------------------- Paper -------------------------------- 
-%\section{Paper}
-%\noindent \textbf{The Alphabet and Algorithm}
-%Read Mario Carpo's book \emph{The Alphabet and Algorithm}
-%and write a 2000-word critical essay about
-%the evolving nature of architectural authorship.
-%Address how digital tools have transformed 
-%the practice of landscape architecture
-%and envision how they will shape 
-%the future of the discipline. 
-%
-%%\noindent In preparation for this course please read:
-%\nocite{*} \printbibliography[keyword=intro, heading=none]
-
-%% -------------------------------- Projects -------------------------------- 
-%\section{Projects}
-%
-%\noindent \textbf{Geospatial modeling}
-%Using lidar data you will model, analyze, and digitally fabricate
-%the topography of the study landscape. 
-%%
-%%After processing the lidar point cloud
-%%and generating digital models of the topography,
-%Each group will CNC mill a physical model of the landscape
-%in a different media -- either medium density fiberboard, 
-%polystyrene foam, or urethane foam.
-%Then each group will prepare a different set of 
-%-- either topographic, hydrologic, or sedimentation -- 
-%analyses and simulations.\\
-%
-%% Topographic: contours, slope, hillshade, landforms
-%% Hydrologic: watershed, flow accumulation, water flow
-%% Sedimentation: sediment flux, erosion-deposition, landscape evolution
-%
-%\noindent \textbf{Generative design}
-%Using visual programming you will generatively design
-%erosion control features to restore your degraded study landscape.
-%Through a series of algorithmically generated design interventions 
-%you will explore interactions between 
-%topographic form and hydrologic processes.
-%Your goal is to catalyze topographic changes that will 
-%restore the landscape to a dynamic equilibrium.  
-%You will produce 3D printed models of your designs
-%and augment these with projected water flow and sediment flux. \\
-%
-%\noindent \textbf{Ecosystem modeling}
-%After mapping the existing vegetation 
-%you will design, model, and render in 3D
-%a planting plan to restore this degraded landscape. 
-%You will produce beautiful, photorealistic 3D renderings  
-%of the existing landscape and your design. \\
-
-%\clearpage
-
-%% -------------------------------- SESSIONS -------------------------------- 
-%\section{Sessions}
-%
-%\renewcommand*{\bibfont}{\footnotesize}
-%
-%\noindent \textbf{Terrain modeling}
-%Model topography in 3D from lidar data.\\
-%
-%\noindent \textbf{Digital fabrication}
-%Use computer numerical control (CNC) machining 
-%to carve physical models of topography. 
-%Learn how to cast a topographic model
-%in aluminum.
-%%
-%\nocite{*} \printbibliography[keyword=fabrication, heading=none]
-%\vspace*{0.5em}
-%
-%\noindent \textbf{Geospatial analysis}
-%Model and analyze topographic parameters including 
-%contours, slope, hillshading, and landforms
-%and hydrologic parameters 
-%including watersheds and flow accumulation. \\
-%
-%\noindent \textbf{Geospatial simulation}
-%Simulate the physical processes that shape landscapes including
-%water flow, sediment flux, erosion-deposition, and landscape evolution.\\
-%
-%\noindent \textbf{Surface modeling}
-%Model complex, continuous, 3D surfaces 
-%using non-uniform rational basis splines (NURBS).\\
-%
-%\noindent \textbf{Visual programming}
-%Use visual programming to automatically generate
-%patterns and forms.
-%%
-%\nocite{*} \printbibliography[keyword=algorithmic, heading=none]
-%\vspace*{0.5em}
-%
-%\noindent \textbf{Families of form}
-%Use visual programming to procedurally generate families of form
-%based on parametric variations.
-%%
-%\nocite{*} \printbibliography[keyword=procedural, heading=none]
-%\vspace*{0.5em}
-%
-%\noindent \textbf{Generative processes}
-%Procedurally generate dynamic forms using 
-%parametric equations and attractors.\\
-%
-%\noindent \textbf{Image classification}
-%Use aerial photography to automatically classify 
-%different types of landcover.\\
-%
-%\noindent \textbf{3D plants}
-%Procedurally model unique specimens 
-%of trees and other plants in 3D.
-%Model an ecosystem in 3D using 3D plant libraries.
-%%
-%\nocite{*} \printbibliography[keyword=plants, heading=none]
-%\vspace*{0.5em}
-%
-%\noindent \textbf{Particle systems}
-%Generate fields of plants 
-%using particle systems. \\
-%
-%\noindent \textbf{Rendering}
-%Setup lights, prepare materials and textures, 
-%and render 3D scenes with raytracing.\\
-%
-%\noindent \textbf{Physics}
-%Simulate processes like water flow and rock fall
-%using a physics engine.\\
-%
-%\noindent \textbf{Exhibition}
-%Present your work at a gallery style exhibition.\\
-
 % -------------------------------- Software -------------------------------- 
 \section{Software}
+GRASS GIS | \url{https://grass.osgeo.org/}\\
+Blender | \url{https://www.blender.org/}\\
 Rhinoceros | \url{https://www.rhino3d.com/}\\
 RhinoTerrain | \url{http://www.rhinoterrain.com/}\\
-Iray for Rhino | \url{http://www.nvidia.com/object/iray-for-rhino.html}\\
-Grasshopper | \url{http://grasshopper3d.com/}\\
-Firefly % url ?
+RhinoCAM | \url{https://mecsoft.com/rhinocam-software/}\\
 
-%% -------------------------------- Resources -------------------------------- 
-%\section{Resources}
+\clearpage
 
-% Arduino
-% Grasshopper
-% Rhino
-% Lynda
-% Youtube
+% -------------------------------- TOPICS -------------------------------- 
+\section{Topics}
+\normalsize
 
-% -------------------------------- Precedents -------------------------------- 
-\section{Precedents}
-
-\noindent
-% analog
-Calder | \url{}\\
-Tingueley | \url{}\\
-Francois Delaroziere, Les Machines | \url{http://www.lamachine.fr/en/}\\
-Theo Jansen, Strandbeest  | \url{}\\
+\noindent \textbf{Landscape ecology}
+An introduction to landscape ecology and biodiversity conservation.
+The methods workshop will cover 
+ecological census techniques, interpolation methods, and
+hotspot analysis. 
 %
-Sedimachine | \url{}\\
-% Gramazio and Kohler
+\nocite{*} \printbibliography[keyword=intro, heading=none]
+\vspace*{0.5em}
+% readings: ecological census techniques, priortizing conservation with hotspots
 
-% precedents: Sean Alquist, Gramazio and Kohler, Achim Menges
-% readings: greg lynn, animate form; fabricate
-% performance: papers, case studies, adaptive management, monitoring, and metrics
-% precedents: sedimachine, strandbeest, sand engine / zandmotor
-% agricultural printing, uav planting, autonomous construction (ethz)
+\noindent \textbf{Geospatial programming}
+A series of methods workshop will introduce visual programming, python programming, and python scripting in GIS. 
+You will also learn how to use Git, a version control system, to maintain your code.
+%
+\nocite{*} \printbibliography[keyword=python, heading=none]
+\vspace*{0.5em}
+
+\noindent \textbf{Form \& process}
+%  <---------------------------------------------------EDITING HERE
+%
+\nocite{*} \printbibliography[keyword=form_and_process, heading=none]
+\vspace*{0.5em}
+% readings: ...
+
+%Seminar: form and process
+%Methods lecture: flooding, water flow, erosion
+%Methods walkthrough: r.geomorphons, r.watershed, r.stream*, r.lake, rulse3D, avalanche
+
+
+
+\noindent \textbf{Ecological baselines}
+...  % climate change
+%
+\nocite{*} \printbibliography[keyword=form_and_process, heading=none]
+\vspace*{0.5em}
+% readings: rewilding, shifting baselines, long term eco, alternative futures for willamete valley
+
+%Seminar: baselines, rewilding, and restoration
+%Methods lecture: landfire data, ...
+
+% Donlan, Rewilding North America
+%R. Corlett, The Role of Rewilding in Landscape Design for Conservation, 
+%P. Martin, Twilight of the Mammoths: Ice Age Extinctions and the Rewilding of America
+%J. Donlan, Re-wilding North America. Rubenstein DR, 
+%D.I. Rubenstein, Pleistocene Park: Does re-wilding North America represent sound conservation for the 21st century?
+%W. Cornwall, Have returning wolves really saved Yellowstone? 
+
+
+\noindent \textbf{Suitability analysis}
+... 
+%
+\nocite{*} \printbibliography[keyword=suitability, heading=none]
+\vspace*{0.5em}
+% readings: design with nature, systematic conservation planning
+
+%Seminar: habitat identification, patches, richness, and overlay analysis
+%Topics: Ian McHarg, systematic conservation planning, & alternative futures
+%Methods lecture: classification, summary statistics, overlay analysis
+%Methods walkthrough: image segmentation and classification, v.habitat.dem, r.watershed, r.stream*, r.stats, & r.series
+
+
+\noindent \textbf{Viewsheds}
+...  % Viewshed
+%
+\nocite{*} \printbibliography[keyword=viewsheds, heading=none]
+\vspace*{0.5em}
+% readings: ...
+
+%  r.viewshed.cva, PCA, skyiew
+
+
+\noindent \textbf{Corridors}
+... % migration and climate change adaption
+%
+\nocite{*} \printbibliography[keyword=corridors, heading=none]
+\vspace*{0.5em}
+% readings: land mosaics, sloss, sloss debate, theory of  island biogeography
+
+%Seminar: fragmentation, connectivity, and corridor design
+%Topics: SLOSS, migration routes, & climate refugees
+%Methods lecture: landscape structure, overlay analysis, least cost path analysis, & r.connectivity*
+%Methods walkthrough: r.li, r.mapcalc, r.cost, r.drain, r.walk, &  v.net.salesman
+
+
+
+
+\noindent \textbf{Land change}
+... 
+%
+\nocite{*} \printbibliography[keyword=futures, heading=none]
+\vspace*{0.5em}
+% readings: futures
+
+%Seminar: ecological succession, flooding, urban growth, and land change
+%Methods lecture: land change modeling
+%Methods walkthrough: r.futures.* & ITZI
+
+
+\noindent \textbf{Fire simulation}
+... 
+%
+\nocite{*} \printbibliography[keyword=fire, heading=none]
+\vspace*{0.5em}
+% readings: tl chapter, fire disturbance regimes?
+
+\noindent \textbf{Flood simulation}
+... 
+%
+\nocite{*} \printbibliography[keyword=flooding, heading=none]
+\vspace*{0.5em}
+% readings: ...
+
+\noindent \textbf{Digital fabrication}
+... 
+%
+\nocite{*} \printbibliography[keyword=fabrication, heading=none]
+\vspace*{0.5em}
+% readings: ...
+
+\noindent \textbf{Landscape planning}
+... 
+%
+\nocite{*} \printbibliography[keyword=planning, heading=none]
+\vspace*{0.5em}
+% readings: ...
+
+\noindent \textbf{3D rendering}
+... % Python scripting
+%
+\nocite{*} \printbibliography[keyword=viz, heading=none]
+\vspace*{0.5em}
+% readings: TL book and papers, blender tutorials, geo modeling website
+
+\clearpage
 
 % -------------------------------- Readings -------------------------------- 
 \section{Readings}
@@ -374,7 +369,7 @@ Sedimachine | \url{}\\
 
 \noindent \textbf{Time Commitment Expectations}
 LSU's general policy states that for each credit hour, you (the student) should plan to
-spend at least two hours working on course related activities outside of class. Since this course is for three credit hours, you should expect to spend a minimum of six hours outside of class each week working on assignments for this course. For more information see: 
+spend at least two hours working on course related activities outside of class. Since this course is for six credit hours, you should expect to spend a minimum of twelve hours outside of class each week working on assignments for this course. For more information see: 
 \url{http://catalog.lsu.edu/content.php?catoid=12&navoid=822}.\\
 
 \noindent \textbf{LSU student code of conduct}
@@ -392,34 +387,6 @@ indicating the existence of a disability and the suggested accommodations.\\
 According to section 10.1 of the LSU Code of Student Conduct, ``A student may be charged with Academic Misconduct'' for a variety of offenses, including the following: unauthorized copying, collusion, or collaboration; ``falsifying'' data or citations; ``assisting someone in the commission or attempted commission of an offense''; and plagiarism, which is defined in section 10.1.H as a ``lack of appropriate citation, or the unacknowledged inclusion of someone else's words, structure, ideas, or data; failure to identify a source, or the submission of essentially the same work for two assignments without permission of the instructor(s).''\\
 
 \noindent \textbf{Plagiarism and Citation Method}
-Plagiarism is the ``lack of appropriate citation, or the unacknowledged inclusion of someone else's words, structure, ideas, or data; failure to identify a source, or the submission of essentially the same work for two assignments without permission of the instructor(s)'' (Sec. 10.1.H of the LSU Code of Student Conduct). As a student at LSU, it is your responsibility to refrain from plagiarizing the academic property of another and to utilize appropriate citation method for all coursework. In this class, it is recommended that you use Chicago Style author-date citations. Ignorance of the citation method is not an excuse for academic misconduct.\\ 
-
-%\noindent \textbf{Graduate Certificate in GIS}
-%This course counts as an applied topics course for the 
-%Graduate Certificate in Geographic Information Science.
-%The Graduate Certificate in Geographic Information Science at LSU 
-%is a 12 credit hour standalone certificate with courses offered 
-%in the Department of Geography and Anthropology, College of Art and Design, 
-%Department of Economics, School of the Coast and Environment, 
-%Department of Civil and Environmental Engineering, 
-%and Department of Computer Science. 
-%For more information about the Graduate Certificate in GIS visit: 
-%\url{http://ga.lsu.edu/gis-certificate/}. \\
-
-\noindent \textbf{Grading}
-%
-\begin{table}[H]
-\small
-%\begin{tabular}{l r @{\hskip 0.1cm} l @{\hskip 0.5cm} l}
-\begin{tabular}{l l}
-%
-\textbf{Project |} \ldots & 20\% \\
-\textbf{Project |} \ldots & 20\% \\
-\textbf{Project |} \ldots & 20\% \\
-\textbf{Project |} \ldots & 20\% \\
-\textbf{Exhibition} & 20\% \\
-%
-\end{tabular}
-\end{table}
+Plagiarism is the ``lack of appropriate citation, or the unacknowledged inclusion of someone else's words, structure, ideas, or data; failure to identify a source, or the submission of essentially the same work for two assignments without permission of the instructor(s)'' (Sec. 10.1.H of the LSU Code of Student Conduct). As a student at LSU, it is your responsibility to refrain from plagiarizing the academic property of another and to utilize appropriate citation method for all coursework. In this class, it is recommended that you use Chicago Style author-date citations. Ignorance of the citation method is not an excuse for academic misconduct.
 
 \end{document}
